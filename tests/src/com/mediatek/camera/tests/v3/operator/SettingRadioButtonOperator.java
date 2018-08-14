@@ -1,0 +1,106 @@
+package com.mediatek.camera.tests.v3.operator;
+
+import android.support.test.uiautomator.By;
+import android.support.test.uiautomator.UiObject2;
+
+import com.mediatek.camera.common.debug.LogHelper;
+import com.mediatek.camera.common.debug.LogUtil;
+import com.mediatek.camera.tests.v3.arch.Page;
+import com.mediatek.camera.tests.v3.util.Utils;
+
+import java.util.List;
+
+public abstract class SettingRadioButtonOperator extends SettingConfigOperator {
+    private static final LogUtil.Tag TAG = Utils.getTestTag(SettingRadioButtonOperator.class
+            .getSimpleName());
+
+    @Override
+    public int getOperatorCount() {
+        return getSettingOptionsCount();
+    }
+
+    @Override
+    protected void doOperate(int index) {
+        Utils.assertRightNow(setSettingRadioButton(getSettingTitle(), getSettingOptionTitle
+                (index)));
+    }
+
+    @Override
+    public Page getPageBeforeOperate(int index) {
+        return Page.SETTINGS;
+    }
+
+    @Override
+    public Page getPageAfterOperate(int index) {
+        return Page.SETTINGS;
+    }
+
+    @Override
+    public String getDescription(int index) {
+        return "Set [" + getSettingTitle() + "] as " + getSettingOptionTitle(index);
+    }
+
+    protected abstract int getSettingOptionsCount();
+
+    protected abstract String getSettingTitle();
+
+    protected abstract String getSettingOptionTitle(int index);
+
+    // Sometimes, not use the option tile as the summary of this setting item, such as Video
+    // quality, not use 4K/FHD/QHD as the setting summary, but use the 1920*1080 as the setting
+    // summary, in this case, this function should return false
+    protected abstract boolean isUseOptionTitleAsSummary();
+
+    public boolean setSettingRadioButton(String title, String option) {
+        LogHelper.d(TAG, "[setSettingRadioButton] title = " + title + ", option = " + option);
+        UiObject2 settingItemEntry = Utils.findObject(By.text(title));
+        if (settingItemEntry == null) {
+            LogHelper.d(TAG, "[setSettingRadioButton] settingItemEntry is null, return false");
+            return false;
+        }
+        settingItemEntry.click();
+        UiObject2 optionEntry = Utils.scrollOnScreenToFind(By.text(option));
+        if (optionEntry == null) {
+            Utils.getUiDevice().pressBack();
+            LogHelper.d(TAG, "[setSettingRadioButton] optionEntry is null, return false");
+            return false;
+        }
+
+        List<UiObject2> titleAndSummary = optionEntry.getParent().getChildren();
+        String optionTitleText = titleAndSummary.get(0).getText();
+        String optionSummaryText = "summaryText";
+        if (titleAndSummary.size() == 2) {
+            optionSummaryText = titleAndSummary.get(1).getText();
+        }
+
+        UiObject2 radioButton = findRadioButton(optionEntry);
+        if (radioButton == null) {
+            Utils.getUiDevice().pressBack();
+            LogHelper.d(TAG, "[setSettingRadioButton] radioButton is null, return false");
+            return false;
+        } else if (radioButton.isChecked()) {
+            Utils.getUiDevice().pressBack();
+            LogHelper.d(TAG, "[setSettingRadioButton] radioButton is checked already, return " +
+                    "true");
+            return true;
+        }
+        LogHelper.d(TAG, "[setSettingRadioButton] click");
+        radioButton.click();
+
+        if (isUseOptionTitleAsSummary()) {
+            return Utils.waitObject(
+                    By.res("android:id/summary")
+                            .clazz("android.widget.TextView")
+                            .text(optionTitleText));
+        } else {
+            return Utils.waitObject(
+                    By.res("android:id/summary")
+                            .clazz("android.widget.TextView")
+                            .text(optionSummaryText));
+        }
+    }
+
+    private UiObject2 findRadioButton(UiObject2 object) {
+        return object.getParent().getParent().findObject(By.clazz("android.widget.RadioButton"));
+    }
+}

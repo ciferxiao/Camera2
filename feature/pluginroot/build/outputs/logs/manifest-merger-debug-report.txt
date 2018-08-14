@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml:1:1-5:12
+	package
+		ADDED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml:2:5-39
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml:4:5-30
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml:3:5-28
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml reason: use-sdk injection requested
+	android:targetSdkVersion
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml
+		INJECTED from /home/xiaojinggong/application/Camera2/feature/pluginroot/AndroidManifest.xml

@@ -1,0 +1,11 @@
+com.mediatek.camera.at.hdr.on,true
+com.mediatek.camera.at.hdr.off,true
+com.mediatek.camera.at.hdr.auto,false
+com.mediatek.camera.at.flash.on,true
+com.mediatek.camera.at.flash.off,true
+com.mediatek.camera.at.flash.auto,true
+com.mediatek.camera.at.dng.on,true
+com.mediatek.camera.at.dng.off,true
+com.mediatek.camera.at.cs,false
+com.mediatek.camera.at.iso,false
+com.mediatek.camera.at.whitebalance,true

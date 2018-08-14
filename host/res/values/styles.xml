@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When an activity requests a theme with an action bar from its manifest,
+         the activity preview window created by the system process while the
+         real activity is loading will also contain an action bar. Set this to
+         NoActionBar and change the theme in onCreate. -->
+     <style name="ThemeCamera" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="@*android:panelBackground">@*android:drawable/menu_hardkey_panel_holo_dark</item>
+        <item name="@*android:panelMenuListTheme">@*android:style/Theme.Material.CompactMenu</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        
+    </style>
+    <style name="RecordingLayout" parent="ScreenMargin">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="ScreenMargin">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    <style name="RecordingSizeProgress">
+        <item name="android:layout_width">264dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:color">#F19A21</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="ReviewIconGroup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="ReviewControlIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="OrganLayoutLeft">
+        <item name="android:layout_height">300dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">14dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ShotLayoutLeft">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">260dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">208dp</item>
+    </style>
+
+    <style name="ShutterButton">
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_width">42dp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="PatientLayoutStyle">
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="StatusBarStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TextAppearance.StatusBar.Clock" parent="@*android:style/TextAppearance.StatusBar.Icon">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/status_bar_clock_color</item>
+    </style>
+
+
+    <style name="OrganLayoutRight">
+        <item name="android:layout_height">300dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">13dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+</resources>

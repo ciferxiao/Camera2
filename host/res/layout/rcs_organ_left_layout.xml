@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_width="wrap_content">
+
+
+    <!--RCS100 左耳,左眼;右耳,右眼；灯光和焦距的调节栏 start-->
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <com.mediatek.camera.rcs.ui.VerticalSeekBar
+                android:id="@+id/focus_seekBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="12dip"
+                android:maxHeight="2dp"
+                android:minHeight="1dp"
+                android:paddingBottom="22dip"
+                android:splitTrack="false"
+                android:thumbOffset="0dp"
+                android:progressDrawable="@drawable/progress_bar"
+                android:thumb="@drawable/thumb_bar" />
+
+            <com.mediatek.camera.rcs.ui.VerticalSeekBar
+                android:id="@+id/exposure_seekBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="12dip"
+                android:maxHeight="2dp"
+                android:minHeight="1dp"
+                android:paddingBottom="22dip"
+                android:splitTrack="false"
+                android:thumbOffset="0dp"
+                android:progressDrawable="@drawable/progress_bar"
+                android:thumb="@drawable/thumb_bar" />
+        </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <RelativeLayout
+            android:id="@+id/eye_organ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/left_eye"
+                android:src="@drawable/rcs_left_eye_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/right_eye"
+                android:src="@drawable/rcs_right_eye_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ear_organ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <ImageView
+                android:id="@+id/left_ear"
+                android:src="@drawable/rcs_left_ear_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/right_ear"
+                android:src="@drawable/rcs_right_ear_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </FrameLayout>
+    <!--RCS100 左耳,左眼;右耳,右眼；灯光和焦距的调节栏 end-->
+
+</LinearLayout>

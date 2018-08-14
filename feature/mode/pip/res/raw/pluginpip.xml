@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin
+    id="pipplugin"
+    name="pip"
+    version="1">
+
+    <extension
+        id="pipphoto"
+        name="pip photo extension"
+        class="com.mediatek.camera.feature.mode.pip.photo.PipPhotoEntry"
+        plugin-id="cameraplugin"
+        point-id="FeatureEntryBase">
+    </extension>
+    <extension
+        id="pipvideo"
+        name="pip video extension"
+        class="com.mediatek.camera.feature.mode.pip.video.PipVideoEntry"
+        plugin-id="cameraplugin"
+        point-id="FeatureEntryBase">
+    </extension>
+</plugin>

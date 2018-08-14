@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false">
+
+    <FrameLayout
+        android:id="@+id/preview_frame_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:splitMotionEvents="false">
+
+        <include layout="@layout/preview_layout" />
+    </FrameLayout>
+    <!-- 尺子UI start-->
+    <com.mediatek.camera.rcs.ruler.RulerFrameLayout
+        android:id="@+id/rule_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/surface_img"
+            android:src="@drawable/rcs_surfaceview_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.mediatek.camera.rcs.ruler.RulerView
+            android:id="@+id/ruler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/rule_unit"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.mediatek.camera.rcs.ruler.RulerFrameLayout>
+    <!-- 尺子UI end-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/preview_cover"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/app_ui_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false" />
+
+    <com.mediatek.camera.common.widget.PreviewFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/preview_layout_container"
+        android:layout_gravity="center"
+        android:layoutDirection="ltr"
+        android:splitMotionEvents="false">
+    </com.mediatek.camera.common.widget.PreviewFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/camera_cover"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/setting_ui_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <include layout="@layout/setting_layout"/>
+        <LinearLayout
+            android:id="@+id/setting_tail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:background="@android:color/black">
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

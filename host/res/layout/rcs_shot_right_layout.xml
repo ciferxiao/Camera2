@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_shutter"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageButton
+            android:id="@+id/auto_mode"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_auto_focus" />
+        <ImageButton
+            android:id="@+id/manual_mode"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_manual_focus"/>
+        <ImageButton
+            android:id="@+id/rcs_manual_focus_close"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_manual_focus_close"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/rcs_exposure_state"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_exposure_light" />
+        <ImageButton
+            android:id="@+id/rcs_exposure_state_close"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_light_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/rcs_photo_state"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_photo_state" />
+        <ImageButton
+            android:id="@+id/rcs_video_state"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_video_state" />
+        <ImageButton
+            android:id="@+id/rcs_shot_state_close"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_shooting_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--RCS100 拍照模式-->
+        <ImageButton
+            android:id="@+id/shutter_button_photo"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_camera" />
+        <!--RCS100 录像模式 -->
+        <ImageButton
+            android:id="@+id/shutter_button_video"
+            style="@style/ShutterButton"
+            android:src="@drawable/rcs_recording" />
+    </RelativeLayout>
+
+</LinearLayout>

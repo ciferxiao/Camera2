@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="portability_2017_08_24">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/common/libs/portability_2017_08_24.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

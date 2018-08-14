@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pip_mode_name">PIP</string>
+    <string name="pip_video_quality_title">Video Quality</string>
+    <string name="pip_video_quality_content_description" translatable="false">
+        @string/pip_video_quality_title</string>
+    <string name="pip_quality_fhd" translatable="false">FHD</string>
+    <string name="pip_quality_hd" translatable="false">HD</string>
+    <string name="pip_quality_vga" translatable="false">VGA</string>
+</resources>
